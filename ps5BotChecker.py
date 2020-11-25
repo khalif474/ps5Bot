@@ -70,6 +70,7 @@ while True:
             print("Change Detected url - "+url,  flush=True)
             context = ssl.create_default_context()
             # Send message
+            alertArticle = newArticle[0].strip("'")
             message = """\
             Subject: Press AU New News !!!
 
