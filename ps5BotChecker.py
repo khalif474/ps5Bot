@@ -34,7 +34,7 @@ Subject: Press AU New News !!!
 
 Press AU New NEWS CHECK IT OUT !!!"""
 
-print("1")
+print("1",  flush=True)
 # ============================================================================================
 
 url = 'https://press-start.com.au/'
@@ -62,12 +62,12 @@ while True:
             'div', {"class": "block block-1 clearfix preview-review-bot"})
         newArticle = findArticles(currentArticles)
         if newArticle == final_currentArticles:
-            print("No changes to site - "+url)
+            print("No changes to site - "+url,  flush=True)
             continue
 
         else:
 
-            print("Change Detected url - "+url)
+            print("Change Detected url - "+url,  flush=True)
             context = ssl.create_default_context()
             # Send message
             message = """\
@@ -89,5 +89,5 @@ while True:
             continue
 
     except Exception as e:
-        print("Server Error")
-        print(e)
+        print("Server Error",  flush=True)
+        print(e,  flush=True)
