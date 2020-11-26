@@ -74,7 +74,7 @@ while True:
             message = """\
             Subject: Press AU New News !!!
 
-            Press AU New NEWS CHECK IT OUT  With new Article """+alertArticle+"""!!!"""
+            Press AU New NEWS CHECK IT OUT  With new Article !!!"""
             with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
                 server.login(sender_email, password)
                 for i in range(20):
